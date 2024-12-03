@@ -1,7 +1,7 @@
 import React from "react";
 
 // assets
-import Profile from "../../assets/profile.jpg";
+import Profile from "../../assets/images/profile.jpg";
 
 const TopleftMenu: React.FC = () => {
     return (
