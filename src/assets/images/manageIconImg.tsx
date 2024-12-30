@@ -6,6 +6,8 @@ import visualStudioIcon from "../images/visual-studio-icon.png";
 import androidStudioIcon from "../images/android-studio-icon.png";
 import xCodeIcon from "../images/xcode-icon.png";
 import azureIcon from "../images/azure-icon.png";
+import bikePov from "../images/bike-pov.jpg";
+import desktopDisplay from "../images/desktop-display.jpg";
 
 export {
     reduxIcon,
@@ -15,5 +17,7 @@ export {
     visualStudioIcon,
     androidStudioIcon,
     xCodeIcon,
-    azureIcon
+    azureIcon,
+    bikePov,
+    desktopDisplay
 };

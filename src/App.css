@@ -40,3 +40,18 @@
     transform: rotate(360deg);
   }
 }
+
+.activeLinkBorder {
+  position: relative;
+  display: inline-block; /* Ensure proper width and height behavior */
+}
+
+.activeLinkBorder::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #0ea5e9;
+}
