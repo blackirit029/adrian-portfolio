@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 
 // components
-import LeftMenu from "./components/LeftMenu";
+import Header from "./components/Header";
 
 // css
 import "./App.css";
@@ -16,7 +16,7 @@ import "./App.css";
 const App: React.FC = () => {
   return (
     <Router>
-      <LeftMenu />
+      <Header/>
       <Routes>
       <Route path="/" element={ <Home /> } />
         <Route path="/about" element={ <About /> } />
