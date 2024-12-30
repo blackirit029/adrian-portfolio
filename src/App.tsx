@@ -9,6 +9,7 @@ import About from "./pages/About";
 
 // components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // css
 import "./App.css";
@@ -18,9 +19,10 @@ const App: React.FC = () => {
     <Router>
       <Header/>
       <Routes>
-      <Route path="/" element={ <Home /> } />
+        <Route path="/" element={ <Home /> } />
         <Route path="/about" element={ <About /> } />
       </Routes>
+      <Footer />
     </Router>
   );
 };
