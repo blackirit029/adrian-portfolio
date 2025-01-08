@@ -35,9 +35,7 @@ const About: React.FC = () => {
 
     return (
         <div className="w-full h-full flex justify-center mt-12 font-mono flex-col items-center text-white">
-            <div className="mt-14">
-                <h1 className="text-4xl font-bold">About</h1>
-            </div>
+            <div className="text-4xl font-bold">About</div>
             {renderRightImgAbout()}
             {renderLeftImgAbout()}
         </div>

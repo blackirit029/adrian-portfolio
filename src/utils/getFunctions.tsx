@@ -59,9 +59,23 @@ const getRenderIcon = (img: any, name: string) => {
     }
 
     return displayIcon;
-}
+};
+
+
+// to do if possible change the background of card when hover same color with the icon
+// https://codepen.io/sosuke/pen/Pjoqqp use this website to change the color of icon
+const getHandleCardHoverBgColor = (name: string) => {
+    let bgCardColor = "";
+
+    if (name === "React") {
+        bgCardColor = " bg-cyan-500 text-white ";
+    }
+
+    return bgCardColor;
+};
 
 export {
     getHandleIconColor,
     getRenderIcon,
+    getHandleCardHoverBgColor,
 }

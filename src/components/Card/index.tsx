@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 
 // functions
-import { getRenderIcon } from "../../app/getFunctions";
+import { getRenderIcon } from "../../utils/getFunctions";
 
 interface CardProps {
     logo: any;
