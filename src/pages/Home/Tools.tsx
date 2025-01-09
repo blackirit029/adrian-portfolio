@@ -21,8 +21,8 @@ const Tools: React.FC = () => {
 
     return (
         <>
-            <div className="mt-14 text-4xl font-bold">Tools</div>
-            <div className="mt-7 grid gap-4 grid-cols-3 grid-rows-2">
+            <div className="font-bold mt-14 md:text-4xl sm:text-3xl text-3xl">Tools</div>
+            <div className="mt-7 grid gap-4 grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-3 sm:grid-rows-2">
                 {
                     tools.map((tool) => {
                         return <Card logo={tool.logo} name={tool.name}/>

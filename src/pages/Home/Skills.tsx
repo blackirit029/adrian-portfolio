@@ -29,8 +29,8 @@ const Skills: React.FC = () => {
 
     return (
         <>
-             <div className="mt-14 text-4xl font-bold">My Skills</div>
-            <div className="mt-7 grid gap-4 grid-cols-5 grid-rows-2">
+             <div className="font-bold mt-14 md:text-4xl sm:text-3xl text-3xl">My Skills</div>
+            <div className="mt-7 grid gap-4 grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-2 sm:grid-cols-3 sm:grid-rows-4">
                 {
                     skills.map((skill) => {
                         return <Card logo={skill.logo} name={skill.name}/>

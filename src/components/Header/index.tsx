@@ -4,8 +4,13 @@ import React, { memo, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation(); // Get the current location
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+      };
 
     const handleScroll = () => {
         const scrollY = window.scrollY;
@@ -51,7 +56,40 @@ const Header = () => {
                     Resume
                 </Link>
                 </div>
+                <div className="md:hidden">
+                    <button onClick={toggleMenu} className="focus:outline-none">
+                        <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M4 6h16M4 12h16m-7 6h7"
+                        ></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
+            {isOpen && (
+                <div className="md:hidden">
+                    <div className="flex flex-col space-y-2 mt-2 ml-3">
+                        <Link to="/" onClick={toggleMenu} className="text-lg">
+                            Home
+                        </Link>
+                        <Link to="/about" onClick={toggleMenu} className="text-lg">
+                            About
+                        </Link>
+                        <Link to="/resume" onClick={toggleMenu} className="text-lg">
+                            Resume
+                        </Link>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

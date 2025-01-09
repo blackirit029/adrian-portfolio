@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // icons
 import {
@@ -13,6 +13,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Contact = () => {
+    const [showCopyDiv, setShowCopyDiv] = useState({ isShow: false, type: "" });
+
     const contact = {
         email: {
             icon: faEnvelope,
@@ -41,9 +43,20 @@ const Contact = () => {
         }
     };
 
-    const renderContactCard = (data: any) => {
+    const handleOnClickCopyClipboard = (type: string, text: string) => {
+        // to do implement copy clipboard
+        navigator.clipboard.writeText(text);
+        setShowCopyDiv({ isShow: true, type });
+
+        setTimeout(() => {
+            setShowCopyDiv({ isShow: false, type: "" });
+        }, 3000);
+    };
+
+    const renderContactCard = (data: any, type: string) => {
         return (
-            <button className="bg-zinc-700 w-[300px] h-12 rounded items-center flex pl-4 hover:bg-sky-500">
+            <button className="bg-zinc-700 w-[300px] h-12 rounded items-center flex pl-4 hover:bg-sky-500"
+                onClick={() => handleOnClickCopyClipboard(type, data.contact)}>
                 <FontAwesomeIcon icon={data.icon} className="w-4 h-4"/>
                 <span className="ml-2 text-sm">{data.contact}</span>
             </button>
@@ -63,13 +76,16 @@ const Contact = () => {
         <>
             <div className="text-4xl font-bold">Contact</div>
             <div className="mt-5 grid gap-4 grid-cols-3 grid-rows-1 ">
-                {renderContactCard(contact.email)}
-                {renderContactCard(contact.phone)}
-                {renderContactCard(contact.location)}
+                {renderContactCard(contact.email, "email")}
+                {renderContactCard(contact.phone, "phone")}
+                {renderContactCard(contact.location, "location")}
             </div>
             <div className="mt-5 grid gap-4 grid-cols-2 grid-rows-1">
                 {renderContactLinkCard(contactLink.github)}
                 {renderContactLinkCard(contactLink.linkedIn)}
+            </div>
+            <div className="transition-opacity ease-in duration-700 h-4 m-2">
+                {showCopyDiv.isShow ? `My ${showCopyDiv.type} is copied to your clipboard!` : " " }
             </div>
         </>
     );
