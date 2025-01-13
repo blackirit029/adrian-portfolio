@@ -55,7 +55,7 @@ const Contact = () => {
 
     const renderContactCard = (data: any, type: string) => {
         return (
-            <button className="bg-zinc-700 w-[300px] h-12 rounded items-center flex pl-4 hover:bg-sky-500"
+            <button className="bg-zinc-700 w-[300px] h-12 rounded items-center flex pl-4 transition duration-150 ease-in-out hover:scale-105"
                 onClick={() => handleOnClickCopyClipboard(type, data.contact)}>
                 <FontAwesomeIcon icon={data.icon} className="w-4 h-4"/>
                 <span className="ml-2 text-sm">{data.contact}</span>
@@ -65,7 +65,7 @@ const Contact = () => {
 
     const renderContactLinkCard = (data: any) => {
         return (
-            <a href={data.link} target="_blank" className="bg-zinc-700 w-[250px] h-12 rounded items-center flex pl-4 hover:bg-sky-500" rel="noreferrer">
+            <a href={data.link} target="_blank" className="bg-zinc-700 w-[300px] h-12 rounded items-center flex pl-4 transition duration-150 ease-in-out hover:scale-105" rel="noreferrer">
                 <FontAwesomeIcon icon={data.icon} className="w-4 h-4 mr-2"/>
                 {data.name}
             </a>
@@ -75,12 +75,12 @@ const Contact = () => {
     return (
         <>
             <div className="text-4xl font-bold">Contact</div>
-            <div className="mt-5 grid gap-4 grid-cols-3 grid-rows-1 ">
+            <div className="mt-5 grid gap-4 lg:grid-cols-3 lg:grid-rows-1 md:grid-rows-2 md:grid-cols-2 sm:grid-cols-1 sm:grid-rows-3">
                 {renderContactCard(contact.email, "email")}
                 {renderContactCard(contact.phone, "phone")}
                 {renderContactCard(contact.location, "location")}
             </div>
-            <div className="mt-5 grid gap-4 grid-cols-2 grid-rows-1">
+            <div className="mt-5 grid gap-4 lg:grid-cols-2 grid-rows-1 md:grid-cols-2 sm:grid-cols-1 sm:grid-rows-2">
                 {renderContactLinkCard(contactLink.github)}
                 {renderContactLinkCard(contactLink.linkedIn)}
             </div>
