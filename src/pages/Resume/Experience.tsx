@@ -63,9 +63,9 @@ const Experience = () => {
         const { position, year, company, jobDescription } = experienceData;
 
         return (
-            <div className="w-[1080px]">
-                <div className="flex justify-between">
-                    <div className="text-xl text-sky-500">{position}</div>
+            <div className="w-[100%]">
+                <div className="flex lg:justify-between lg:mb-0 md:justify-between md:mb-0 sm:justify-between sm:mb-0 flex-col mb-3">
+                    <div className="text-xl text-sky-500 lg:mb-0 md:mb-0 sm:mb-0 mb-3">{position}</div>
                     <div className="text-xl">{year}</div>
                 </div>
                 <div className="text-lg">{company}</div>
@@ -82,7 +82,7 @@ const Experience = () => {
     return (
         <>
             <div className="text-4xl font-bold mt-10">Experience</div>
-            <div className="mt-6">
+            <div className="mt-6 lg:w-[75%] md:w-[85%] sm:w-[90%] w-[90%]">
                 {experience.map((experienceData, index) => {
                     return renderJobExperience(experienceData);
                 })}

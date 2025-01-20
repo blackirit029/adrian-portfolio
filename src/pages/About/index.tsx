@@ -15,7 +15,7 @@ const About: React.FC = () => {
                 <br/><br/>Over the years, I’ve gained hands-on experience in both web and mobile development. This has honed my skills in creating intuitive designs and maintaining performance. My focus has always been on bridging design and functionality effectively.
                 <br/><br/>Looking ahead, I aspire to expand my expertise and become a Full-Stack Developer. I’m eager to explore backend technologies to build complete, end-to-end solutions.
                 </div>
-                <img src={desktopDisplay} alt="desktopDisplay" className="h-[100%] w-full md:rounded-r-2xl md:rounded-l-none md:w-[45%] sm:w-full sm:rounded-2xl rounded-l-2xl" />
+                <img src={desktopDisplay} alt="desktopDisplay" className="h-full w-full rounded-2xl md:rounded-r-2xl md:rounded-l-none md:w-[45%] sm:w-full sm:rounded-2xl" />
             </div>
         );
     }
