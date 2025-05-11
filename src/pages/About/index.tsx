@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // images
 import {
@@ -6,7 +6,7 @@ import {
     desktopDisplay
 } from "../../assets/images/manageIconImg";
 
-const About: React.FC = () => {
+const About = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {

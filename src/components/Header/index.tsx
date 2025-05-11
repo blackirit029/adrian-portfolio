@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect } from "react";
+import { memo, useState, useEffect } from "react";
 
 // router
 import { Link, useLocation } from "react-router-dom";

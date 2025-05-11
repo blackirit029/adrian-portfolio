@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import { memo } from "react";
 
 // icons
 import {
@@ -9,7 +9,7 @@ import {
 // components
 import Card from "../../components/Card";
 
-const Tools: React.FC = () => {
+const Tools = () => {
     const tools = [
         { logo: faNpm, name: "NPM" },
         { logo: faYarn, name: "Yarn" },

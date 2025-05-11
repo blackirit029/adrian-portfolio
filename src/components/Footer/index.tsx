@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import { memo, useState } from "react";
 
 // icons
 import {
@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Footer: React.FC = () => {
+const Footer = () => {
     const [showCopyDiv, setShowCopyDiv] = useState(false);
 
     const handleOnClick = () => {

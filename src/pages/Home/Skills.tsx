@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import { memo } from "react";
 
 // icons
 import {
@@ -13,7 +13,7 @@ import {
 // components
 import Card from "../../components/Card";
 
-const Skills: React.FC = () => {
+const Skills = () => {
     const skills = [
         { logo: faReact, name: "React" },
         { logo: "redux", name: "Redux" },

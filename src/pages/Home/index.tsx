@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // page
 import Skills from "./Skills";
 import Tools from "./Tools";
 
-const Home: React.FC = () => {
+const Home = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
